@@ -15,11 +15,8 @@ public class ReadServlet extends CommonServlet {
 		} else {
 
 			BufferedReader br = new BufferedReader(new FileReader("data/" + id));
-
-			// 파일을 한 문장씩 읽어온다.
 			String str = br.readLine();
 			String content = "";
-			// EOF는 null문자를 포함하고 있다.
 			while (str != null) {
 				content = content + str;
 				str = br.readLine();
